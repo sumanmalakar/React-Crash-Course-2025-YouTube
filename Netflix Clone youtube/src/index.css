@@ -1,0 +1,114 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(20, 20, 20, 0.9);
+  position: fixed;
+  top: 0;
+  width: 95%;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+.navbar:hover{
+  background-color: #141414;
+}
+
+.navbar .logo img{
+  height: 30px;
+  cursor: pointer;
+}
+
+.navbar .menu a{
+  text-decoration: none;
+  margin: 0 15px;
+  color: white;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.navbar .menu a:hover{
+  opacity: 1;
+}
+
+.navbar .profile img{
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.navbar .profile img:hover{
+  transform: scale(1.1);
+}
+
+/* content */
+
+.content{
+  padding: 60px 20px;
+  margin-top: -50px;
+}
+
+.row{
+  margin-bottom: 40px;
+}
+
+.row h2{
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.posters{
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 10px;
+ scroll-snap-type: x mandatory;
+}
+
+.posters img{
+  width: 200px;
+  height: 230px;
+  border-radius: 10px;
+  cursor: pointer;
+ transition: transform 0.3s, box-shadow 0.2s;
+ scroll-snap-align: start;
+}
+
+.posters img:hover{
+  transform: scale(1.1);
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+
+/* custom scrollbar */
+::-webkit-scrollbar{
+  height: 8px;
+  width: 8px;
+  background-color: #2a2a2a;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #e50914;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #f40612;
+}

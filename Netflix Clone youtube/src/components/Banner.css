@@ -1,0 +1,94 @@
+.banner{
+    position: relative;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 60px;
+    box-shadow: inset 0 0 50px #000;
+}
+
+.banner::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.banner-image{
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner-animation{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 200%;
+    height: 100%;
+    display: flex;
+    animation: scrollBackground 60s linear infinite;
+}
+
+@keyframes scrollBackground {
+    0%{
+        transform:translateX(0)
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+.banner-image-1{
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/dadb130d-463b-4e5b-b335-038ed912059e/web_auto_scroll/IN-en-20241118-TRIFECTA-0f09b523-5f99-4055-a5a2-ed2793845396_large.jpg');
+    
+}
+.banner-image-2{
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/dadb130d-463b-4e5b-b335-038ed912059e/web_auto_scroll/IN-en-20241118-TRIFECTA-0f09b523-5f99-4055-a5a2-ed2793845396_large.jpg');
+}
+
+.banner-content{
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 20px;
+
+}
+
+.banner-content h1{
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);;
+}
+
+.banner-content p{
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        ;
+}
+
+.banner-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn{
+    background-color: #e50914;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
